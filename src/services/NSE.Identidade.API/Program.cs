@@ -32,6 +32,7 @@ builder.Services.AddSwaggerGen(c =>
 //******* JWT *********************************************************************
 builder.Services.AddDefaultIdentity<IdentityUser>()
     .AddRoles<IdentityRole>()
+    .AddErrorDescriber<IdentityMensagensPortugues>()
     .AddEntityFrameworkStores<IdentidadeDbContext>()
     .AddDefaultTokenProviders();
 
