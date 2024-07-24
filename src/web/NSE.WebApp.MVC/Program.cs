@@ -1,9 +1,16 @@
+using NSE.WebApp.MVC.Configuration;
+
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-builder.Services.AddControllersWithViews();
+builder.Services.AddIdentityConfiguration();
+
+builder.Services.AddMvcConfiguration(builder.Configuration);
 
 var app = builder.Build();
+
+app.UseIdentityConfiguration();
+
+
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
