@@ -14,7 +14,15 @@ public class IdentidadeController : Controller
     [HttpPost("nova-conta")]
     public async Task<IActionResult> Registro(UsuarioRegistro usuarioRegistro) 
     {
+        if(!ModelState.IsValid) return View(usuarioRegistro);
 
+        // API - Registro
+
+        if(false) return View(usuarioRegistro);
+
+        // Realizar login na App
+
+        return RedirectToAction("Index", "Home");
     }
 
     public IActionResult Login() 
