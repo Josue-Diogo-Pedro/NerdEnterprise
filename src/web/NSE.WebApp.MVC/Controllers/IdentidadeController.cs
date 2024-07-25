@@ -25,6 +25,7 @@ public class IdentidadeController : Controller
         return RedirectToAction("Index", "Home");
     }
 
+    [HttpGet("login")]
     public IActionResult Login() 
     {
         return View();
