@@ -6,10 +6,7 @@ namespace NSE.WebApp.MVC.Controllers;
 public class IdentidadeController : Controller
 {
     [HttpGet("nova-conta")]
-    public IActionResult Registro()
-    {
-        return View();
-    }
+    public IActionResult Registro() => View();
 
     [HttpPost("nova-conta")]
     public async Task<IActionResult> Registro(UsuarioRegistro usuarioRegistro) 
@@ -26,10 +23,7 @@ public class IdentidadeController : Controller
     }
 
     [HttpGet("login")]
-    public IActionResult Login() 
-    {
-        return View();
-    }
+    public IActionResult Login() => View();
 
     [HttpPost("login")]
     public async Task<IActionResult> Login(UsuarioLogin usuarioLogin) 
