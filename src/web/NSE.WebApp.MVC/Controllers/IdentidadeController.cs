@@ -33,6 +33,15 @@ public class IdentidadeController : Controller
     [HttpPost("login")]
     public async Task<IActionResult> Login(UsuarioLogin usuarioLogin) 
     {
+        if (!ModelState.IsValid) return View(usuarioLogin);
+
+        // API - Login
+
+        if (false) return View(usuarioLogin);
+
+        // Realizar login na App
+
+        return View("Index", "Home");
 
     }
 
