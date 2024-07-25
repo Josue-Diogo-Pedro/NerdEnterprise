@@ -48,7 +48,7 @@ public class IdentidadeController : Controller
     [HttpGet("sair")]
     public async Task<IActionResult> Logout() 
     {
-
+        return RedirectToAction("Index", "Home");
     }
 
 }
