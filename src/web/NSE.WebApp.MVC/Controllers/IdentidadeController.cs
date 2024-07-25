@@ -17,5 +17,9 @@ public class IdentidadeController : Controller
 
     }
 
+    public IActionResult Login() 
+    {
+        return View();
+    }
 
 }
