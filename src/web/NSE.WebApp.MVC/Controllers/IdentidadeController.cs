@@ -22,4 +22,10 @@ public class IdentidadeController : Controller
         return View();
     }
 
+    [HttpPost("login")]
+    public async Task<IActionResult> Login(UsuarioLogin usuarioLogin) 
+    {
+
+    }
+
 }
